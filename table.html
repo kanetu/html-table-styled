@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Table Styled</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      table {
+        border-spacing: 0;
+        font-family: system-ui;
+
+        :is(td, th) {
+          border-style: solid;
+          border-block-width: 2px 0;
+          border-inline-width: 2px 0;
+          padding: 0.5ch 1ch;
+          &:last-of-type {
+            border-inline-end-width: 1px;
+          }
+        }
+
+        col:nth-of-type(even) {
+          /* background: #f2f2f2; */
+        }
+
+        tr:nth-of-type(odd) {
+          background: #f2f2f2;
+        }
+        tr:last-of-type {
+          td {
+            border-block-end-width: 2px;
+          }
+        }
+
+        th {
+          &:first-of-type {
+            border-start-start-radius: 0.5em;
+          }
+          &:last-of-type {
+            border-start-end-radius: 0.5em;
+          }
+        }
+
+        tr {
+          &:last-of-type {
+            & td {
+              &:first-of-type {
+                border-end-start-radius: 0.5em;
+              }
+
+              &:last-of-type {
+                border-end-end-radius: 0.5em;
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <col />
+        <col />
+        <col />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Known As</th>
+          <th>Place</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bruce</td>
+          <td>Wayne</td>
+          <td>Batman</td>
+          <td>Gotham City</td>
+        </tr>
+        <tr>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>Superman</td>
+          <td>Metropolis</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>Iron Man</td>
+          <td>Malibu</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>Spider-Man</td>
+          <td>New York City</td>
+        </tr>
+        <tr>
+          <td>Matt</td>
+          <td>Murdock</td>
+          <td>Daredevil</td>
+          <td>New York City</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
