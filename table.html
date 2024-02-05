@@ -68,10 +68,33 @@
           border-inline-width: 1px 0;
         }
       }
+
+      .hover-cells-rows-table {
+        td:hover {
+          background: red;
+        }
+
+        tr:hover {
+          background: #666666;
+        }
+
+        &:has(:is(td, th):nth-child(1):hover) col:nth-child(1) {
+          background: blue;
+        }
+        &:has(:is(td, th):nth-child(2):hover) col:nth-child(2) {
+          background: blue;
+        }
+        &:has(:is(td, th):nth-child(3):hover) col:nth-child(3) {
+          background: blue;
+        }
+        &:has(:is(td, th):nth-child(4):hover) col:nth-child(4) {
+          background: blue;
+        }
+      }
     </style>
   </head>
   <body>
-    <table class="split-rows-table">
+    <table class="hover-cells-rows-table">
       <colgroup>
         <col />
         <col />
