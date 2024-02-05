@@ -20,12 +20,9 @@
         }
 
         col:nth-of-type(even) {
-          /* background: #f2f2f2; */
-        }
-
-        tr:nth-of-type(odd) {
           background: #f2f2f2;
         }
+
         tr:last-of-type {
           td {
             border-block-end-width: 2px;
@@ -55,10 +52,18 @@
           }
         }
       }
+
+      .split-columns-table {
+        border-spacing: 2ch 0;
+
+        & :is(td, th) {
+          border-inline-width: 1px;
+        }
+      }
     </style>
   </head>
   <body>
-    <table>
+    <table class="split-columns-table">
       <colgroup>
         <col />
         <col />
