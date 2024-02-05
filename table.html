@@ -60,10 +60,18 @@
           border-inline-width: 1px;
         }
       }
+
+      .split-rows-table {
+        border-spacing: 0 2ch;
+        & :is(td, th) {
+          border-block-width: 1px;
+          border-inline-width: 1px 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <table class="split-columns-table">
+    <table class="split-rows-table">
       <colgroup>
         <col />
         <col />
